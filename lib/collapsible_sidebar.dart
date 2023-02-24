@@ -35,6 +35,8 @@ class CollapsibleSidebar extends StatefulWidget {
     this.selectedIconBox = const Color(0xff2F4047),
     this.selectedIconColor = const Color(0xff4AC6EA),
     this.selectedTextColor = const Color(0xffF3F7F7),
+    this.alertIconColor = const Color(0xffff5252),
+    this.alertTextColor = const Color(0xffff5252),
     this.unselectedIconColor = const Color(0xff6A7886),
     this.unselectedTextColor = const Color(0xffC0C7D0),
     this.duration = const Duration(milliseconds: 500),
@@ -87,6 +89,8 @@ class CollapsibleSidebar extends StatefulWidget {
       selectedIconBox,
       selectedIconColor,
       selectedTextColor,
+      alertIconColor,
+      alertTextColor,
       unselectedIconColor,
       unselectedTextColor;
   final Duration duration;
@@ -357,6 +361,10 @@ class _CollapsibleSidebarState extends State<CollapsibleSidebar>
       if (item.isSelected) {
         iconColor = widget.selectedIconColor;
         textColor = widget.selectedTextColor;
+      }
+      if (item.alert) {
+        iconColor = widget.alertIconColor;
+        textColor = widget.alertTextColor;
       }
       return CollapsibleItemWidget(
         onHoverPointer: widget.onHoverPointer,

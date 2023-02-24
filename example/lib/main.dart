@@ -80,6 +80,7 @@ class _SidebarPageState extends State<SidebarPage> {
       CollapsibleItem(
         text: 'Alarm',
         icon: Icons.access_alarm,
+        alert: true,
         onPressed: () => setState(() => _headline = 'Alarm'),
       ),
       CollapsibleItem(

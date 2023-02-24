@@ -7,10 +7,12 @@ class CollapsibleItem {
     required this.icon,
     required this.onPressed,
     this.isSelected = false,
+    this.alert = false,
   });
 
   final String text;
   final IconData icon;
   final Function onPressed;
   bool isSelected;
+  bool alert;
 }
